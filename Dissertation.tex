@@ -1,26 +1,19 @@
-\documentclass[type=phd]{mon2017dev}
-
-% \usepackage[pdfa]{hyperref}
-
-% % ——— disable all images (graphicx draft mode) ———
-% \PassOptionsToPackage{draft}{graphicx}
-
-% === PDF/A setup must come first ===
-\pdfminorversion=4              % force PDF 1.4 (last version that PDF/A-1b allows)
-\pdfcompresslevel=0             % disable content compression
-\pdfobjcompresslevel=0          % disable object stream compression
-
-\usepackage[a-1b]{pdfx}
-\usepackage{hyperref}
+\pdfminorversion=4 % for compliance with 1a-b
 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
   \Title{Dissertation}
   \Author{Andrii Nikolaiev}
   \Language{uk-UA}
   \Subject{Development of Data Synthesis and Mathematical Combinatorial Problem Generation Methods Using Large Language Models}
-  \Keywords{Artificial intelligence, automated theorem proving, natural language
-processing, large language models, machine learning, mathematical problems}
+  \Keywords{Artificial intelligence\sep automated theorem proving\sep natural language processing\sep large language models\sep machine learning\sep mathematical problems}
 \end{filecontents*}
+
+\documentclass[type=phd]{mon2017dev}
+
+% % ——— disable all images (graphicx draft mode) ———
+% \PassOptionsToPackage{draft}{graphicx}
+
+\usepackage[a-1b]{pdfx}
 
 % % Removing transparency
 % \pdfpageattr{/Group<</S/None/CS/DeviceRGB>>}
