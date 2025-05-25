@@ -1,0 +1,58 @@
+\documentclass[type=phd]{mon2017dev}
+
+% \usepackage[pdfa]{hyperref}
+
+% % ——— disable all images (graphicx draft mode) ———
+% \PassOptionsToPackage{draft}{graphicx}
+
+% === PDF/A setup must come first ===
+\pdfminorversion=4              % force PDF 1.4 (last version that PDF/A-1b allows)
+\pdfcompresslevel=0             % disable content compression
+\pdfobjcompresslevel=0          % disable object stream compression
+
+\usepackage[a-1b]{pdfx}
+\usepackage{hyperref}
+
+\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+  \Title{Dissertation}
+  \Author{Andrii Nikolaiev}
+  \Language{uk-UA}
+  \Subject{Development of Data Synthesis and Mathematical Combinatorial Problem Generation Methods Using Large Language Models}
+  \Keywords{Artificial intelligence, automated theorem proving, natural language
+processing, large language models, machine learning, mathematical problems}
+\end{filecontents*}
+
+% % Removing transparency
+% \pdfpageattr{/Group<</S/None/CS/DeviceRGB>>}
+% \usepackage{graphicx}
+% \setkeys{Gin}{interpolate=false}
+
+\usepackage{setup}
+% \usepackage{refcheck} % checking the presence of all references used
+
+\begin{document}
+\input{sections/Title page}
+\newpage
+\input{sections/Abstract}
+\input{sections/Abstract-en}
+\input{sections/My publications}
+\tableofcontents
+\input{sections/List}
+\input{sections/Introduction}
+
+% Розділи
+\graphicspath{{./data/}}
+\input{sections/1 Overview}
+\input{sections/2 Dataset}
+\input{sections/3 Experiments}
+\input{sections/4 Analysis}
+\input{sections/5 Conclusion}
+
+% Література
+\bibliography{sections/References}
+\newpage
+
+% Додатки
+\input{sections/Appendix}
+
+\end{document}
